@@ -11,6 +11,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Table;
 import jakarta.persistence.Id;
+import jakarta.persistence.PrePersist;
 
 @Getter
 @Setter
@@ -24,17 +25,26 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    //@Column(unique = true)
+
+    @Column(unique = true, nullable = false)
     private String nickname;
+
+    @Column(nullable = false)
     private String password;
 
-    //private boolean accountLocked;
+    private boolean accountLocked;
     //private boolean enabled;
 
-    /*@CreatedDate
+    @CreatedDate
     @Column(nullable = false, updatable = false)
-    private LocalDateTime localDateTime;
+    private LocalDateTime createdDateTime;
+
     @Column(insertable = false)
-    private LocalDateTime lastModifiedDate;*/
+    private LocalDateTime lastModifiedDate;
+
+    @PrePersist
+    protected void onCreate() {
+        this.createdDateTime = LocalDateTime.now();
+    }
 
 }
