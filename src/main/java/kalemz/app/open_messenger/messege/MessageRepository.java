@@ -1,4 +1,4 @@
-package kalemz.app.open_messenger.message;
+package kalemz.app.open_messenger.messege;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;

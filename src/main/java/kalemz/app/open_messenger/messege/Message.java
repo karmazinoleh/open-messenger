@@ -1,4 +1,4 @@
-package kalemz.app.open_messenger.message;
+package kalemz.app.open_messenger.messege;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -11,7 +11,7 @@ import kalemz.app.open_messenger.user.User;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "message")
+@Table(name = "messages")
 public class Message {
 
     @Id

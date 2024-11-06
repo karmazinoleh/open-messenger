@@ -1,4 +1,4 @@
-package kalemz.app.open_messenger.message;
+package kalemz.app.open_messenger.messege;
 
 import java.util.List;
 
@@ -18,8 +18,18 @@ public class MessageService {
     private UserRepository userRepository;
 
     public Message sendMessage(String senderNickname, String receiverNickname, String content) {
-        User sender = userRepository.findByNickname(senderNickname).get(0);
-        User receiver = userRepository.findByNickname(receiverNickname).get(0);
+        List<User> senderList = userRepository.findByNickname(senderNickname);
+        List<User> receiverList = userRepository.findByNickname(receiverNickname);
+
+        if (senderList.isEmpty()) {
+            throw new IllegalArgumentException("Sender not found with nickname: " + senderNickname);
+        }
+        if (receiverList.isEmpty()) {
+            throw new IllegalArgumentException("Receiver not found with nickname: " + receiverNickname);
+        }
+
+        User sender = senderList.get(0);
+        User receiver = receiverList.get(0);
 
         Message message = Message.builder()
                 .sender(sender)

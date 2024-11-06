@@ -10,7 +10,6 @@ public class UserService {
     private UserRepository userRepository;
 
     public User createUser(String nickname, String password){
-
         User user = User.builder()
             .nickname(nickname)
             .password(password)

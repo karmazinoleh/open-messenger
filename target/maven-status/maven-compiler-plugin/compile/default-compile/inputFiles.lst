@@ -1,0 +1,12 @@
+/Users/kalemz/Documents/GitHub/open-messenger/src/main/java/kalemz/app/open_messenger/OpenMessengerApplication.java
+/Users/kalemz/Documents/GitHub/open-messenger/src/main/java/kalemz/app/open_messenger/chat/Chat.java
+/Users/kalemz/Documents/GitHub/open-messenger/src/main/java/kalemz/app/open_messenger/chat/ChatRepository.java
+/Users/kalemz/Documents/GitHub/open-messenger/src/main/java/kalemz/app/open_messenger/chat/ChatService.java
+/Users/kalemz/Documents/GitHub/open-messenger/src/main/java/kalemz/app/open_messenger/messege/Message.java
+/Users/kalemz/Documents/GitHub/open-messenger/src/main/java/kalemz/app/open_messenger/messege/MessageController.java
+/Users/kalemz/Documents/GitHub/open-messenger/src/main/java/kalemz/app/open_messenger/messege/MessageRepository.java
+/Users/kalemz/Documents/GitHub/open-messenger/src/main/java/kalemz/app/open_messenger/messege/MessageService.java
+/Users/kalemz/Documents/GitHub/open-messenger/src/main/java/kalemz/app/open_messenger/user/User.java
+/Users/kalemz/Documents/GitHub/open-messenger/src/main/java/kalemz/app/open_messenger/user/UserController.java
+/Users/kalemz/Documents/GitHub/open-messenger/src/main/java/kalemz/app/open_messenger/user/UserRepository.java
+/Users/kalemz/Documents/GitHub/open-messenger/src/main/java/kalemz/app/open_messenger/user/UserService.java
