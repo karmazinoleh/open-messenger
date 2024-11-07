@@ -1,9 +1,17 @@
 package kalemz.app.open_messenger.chat;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import kalemz.app.open_messenger.messege.Message;
+import kalemz.app.open_messenger.user.User;
+import lombok.*;
 
+import java.util.List;
+
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "chats")
 public class Chat {
@@ -11,11 +19,11 @@ public class Chat {
     @Id
     private Long id;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+    private String chatName;
 
-    public Long getId() {
-        return id;
-    }
+    @ManyToMany
+    private List<User> participants;
+
+    @OneToMany(mappedBy = "chat", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Message> messages;
 }

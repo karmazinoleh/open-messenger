@@ -1,6 +1,7 @@
 package kalemz.app.open_messenger.messege;
 
 import jakarta.persistence.*;
+import kalemz.app.open_messenger.chat.Chat;
 import lombok.*;
 import java.time.LocalDateTime;
 import kalemz.app.open_messenger.user.User;
@@ -17,6 +18,10 @@ public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "chat_id")
+    private Chat chat;
 
     @ManyToOne
     @JoinColumn(name = "sender_id", nullable = false)
